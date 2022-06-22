@@ -15,12 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/www")
+@RequestMapping("/")
 @SpringBootApplication
 public class NotasDeEstudiantesApplication {
-
-	@Autowired
-	ServiceEstudiantes estudiantes;
 
 	@Autowired
 	ServiceCategorias categorias;
@@ -57,43 +54,6 @@ public class NotasDeEstudiantesApplication {
 
 		return categorias.eliminarCategorias(id);
 	}
-	
-	//
-    
-	@PostMapping("/estudiantes")
-	public String createEstudiante(@RequestBody Estudiante estudiante){
-
-		return estudiantes.createEstudiantes(estudiante);
-
-	}
-
-	@GetMapping("/estudiantes")
-	public List<Estudiante> getEstudiantes(){
-
-		return estudiantes.getEstudiantes();
-	}
-
-	@GetMapping("/estudiantes/{id}")
-	public Estudiante searchForId(@PathVariable Integer id ){
-
-		return estudiantes.searchForId(id);
-
-	}
-
-	@PutMapping("/estudiantes/{id}")
-	public String setEstudiantes( @PathVariable("id")Integer id, @RequestBody Estudiante estudiante){
-
-		return estudiantes.setEstudiantes(id, estudiante);
-	}
-
-	@DeleteMapping("/estudiantes/{id}")
-	public String eliminarEstudiantes(@PathVariable("id")Integer id){
-
-		return estudiantes.eliminarEstudiante(id);
-
-	}
-
-
 
 
 

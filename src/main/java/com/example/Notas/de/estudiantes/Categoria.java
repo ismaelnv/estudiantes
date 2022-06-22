@@ -14,43 +14,32 @@ public class Categoria {
     private String gradeSection;
 
     public Categoria(Integer id,String name,String gradeSection){
-
         this.id = id;
         this.name = name;
         this.gradeSection = gradeSection;
-
     }
 
     public Integer getId(){
-
-        return id;
+        return this.id;
     }
 
     public String getName(){
-
-        return name;
+        return this.name;
     }
 
     public String getGradeSection(){
-        
-        return gradeSection;
-
+        return this.gradeSection;
     }
 
     public void setId(Integer id){
-
         this.id = id;
-
     }
 
     public void setName(String name){
-
         this.name = name;
-
     }
 
     public void setGradeSection(String gradeSection ){
-
         this.gradeSection = gradeSection;
     }
   

@@ -14,43 +14,33 @@ public class Estudiante {
     private Double note;
 
     public Estudiante(Integer id, String name, Double note){
-
         this.id = id;
         this.name = name;
         this.note = note;
-
     }
 
     public Integer getId(){
-
-        return id;
+        return this.id;
     }
 
     public String getName(){
-        
-        return name;
+        return this.name;
     }
 
     public Double getNote(){
-
-        return note;
+        return this.note;
     }
 
     public void setId(Integer id){
-
         this.id = id;
-
     }
 
     public void setName(String name){
-
         this.name = name;
     }
 
     public void setNote(Double note){
-
         this.note = note;
-
     }
     
 }
