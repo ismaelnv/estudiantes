@@ -4,21 +4,21 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ServiceCategorias {
+public class ServiceMaterias {
 
-    private List<Categoria> categorias = new ArrayList<>();
+    private List<Materia> categorias = new ArrayList<>();
 
-    public  String crearCategorias(Categoria categoria){
-        categorias.add(categoria);
+    public  String crearMaterias(Materia materia){
+        categorias.add(materia);
         return "Added successfully";
     }
     
-    public List<Categoria> getCategorias(){
+    public List<Materia> getMaterias(){
         return categorias;
     }
 
-    public Categoria BuscarPorId(Integer id){
-        for (Categoria categoria : categorias) {
+    public Materia BuscarPorId(Integer id){
+        for (Materia categoria : categorias) {
           if(categoria.getId() == id){
             return categoria;
           }    
@@ -26,16 +26,16 @@ public class ServiceCategorias {
         return null;
     }
 
-    public String setCategorias(Integer id, Categoria categoria){
+    public String setMaterias(Integer id, Materia materia){
         for (int i = 0; i < categorias.size(); i++) {
             if( categorias.get(i).getId() == id ){
-                categorias.set(i, categoria);
+                categorias.set(i, materia);
             }
         }
         return "Was updated correctly";
     }
 
-    public String eliminarCategorias(Integer id){
+    public String eliminarMaterias(Integer id){
         for (int i = 0; i < categorias.size(); i++) {
             if(categorias.get(i).getId() == id){  
                 categorias.remove(i);

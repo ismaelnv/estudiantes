@@ -2,7 +2,7 @@ package com.example.Notas.de.estudiantes;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Categoria {
+public class Materia {
 
     @JsonProperty("id")
     private Integer id;
@@ -13,7 +13,7 @@ public class Categoria {
     @JsonProperty("gradeSection")
     private String gradeSection;
 
-    public Categoria(Integer id,String name,String gradeSection){
+    public Materia(Integer id,String name,String gradeSection){
         this.id = id;
         this.name = name;
         this.gradeSection = gradeSection;
